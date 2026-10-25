@@ -31,7 +31,7 @@ Keys: 1–4 select defenders, Space pauses, Escape cancels selection, N starts t
 npm test
 ```
 
-Six simulation tests cover tower economy, path completion, defeat, victory, slowing, upgrade limits, and a full campaign funded entirely by earned buttons.
+Seven simulation tests cover tower economy, path completion, defeat, victory, slowing, upgrade limits, road clearance, and a full campaign funded entirely by earned buttons. The same command also checks browser module syntax.
 
 ## Project layout
 
@@ -45,3 +45,11 @@ Six simulation tests cover tower economy, path completion, defeat, victory, slow
 - `.openai/hosting.json`: existing private Sites deployment identity and static root.
 
 The welcome screen uses the generated gameplay concept. Towers use independent transparent sprites; the quilted battlefield and enemies render dynamically on canvas. Optional Google Fonts have system fallbacks. This is the initial playable 2D version of the game.
+
+## Graphics upgrade
+
+The playable battlefield now uses a detailed painted 3D-style quilted village with warm sunlight, soft ambient shadows, crafted cottages, felt woodland, and a clock town hall. Three transparent enemy assets replace the original simple shapes. Runtime animation adds walking bounce, tower recoil and facing, contact shadows, projectile trails, button explosions, frost sparkles, floating button rewards, and ambient motes. A dark teal and gold HUD frames the brighter battlefield.
+
+The camera maintains proportions across screen sizes; wide displays crop only decorative foreground. Pointer hit testing uses the same camera transform. Build pads and the enemy route align with the painted road. Enemy textures are trimmed and pre-sized once, and the background is cached at high resolution. Reduced-motion preferences suppress ambient and walking animation.
+
+Asset briefs and file names: [ART-DIRECTION.md](ART-DIRECTION.md). Original artwork remains available alongside the v2 assets.

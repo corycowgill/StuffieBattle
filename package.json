@@ -1,1 +1,9 @@
-{"name":"stuffy-town-defense","private":true,"type":"module","scripts":{"dev":"node server.mjs","test":"node --test tests.mjs"}}
+{
+  "name": "stuffy-town-defense",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "test": "node --check dist/game.js && node --check dist/render.js && node --check dist/art.js && node --check dist/sprites.js && node --test tests.mjs"
+  }
+}
