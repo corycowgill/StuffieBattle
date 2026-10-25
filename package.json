@@ -1,9 +1,11 @@
 {
-  "name": "stuffy-town-defense",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "node server.mjs",
-    "test": "node --check dist/game.js && node --check dist/render.js && node --check dist/art.js && node --check dist/sprites.js && node --test tests.mjs"
-  }
+  "name":"stuffy-town-defense",
+  "private":true,
+  "type":"module",
+  "scripts":{
+    "dev":"node server.mjs",
+    "vendor":"node scripts/vendor-three.mjs",
+    "test":"node --check dist/game.js && node --check dist/render.js && node --check dist/geometry.js && node --check dist/characters.js && node --check dist/town.js && node --test tests.mjs tests-3d.mjs"
+  },
+  "dependencies":{"three":"0.186.1"}
 }
